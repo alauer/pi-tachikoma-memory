@@ -92,6 +92,8 @@ export interface SessionState {
   messageCount: number;
   lastSleepAt: number;           // messageCount at last mnemosyne sleep
   insightCount: number;          // # of insights retained to mnemosyne this session
+  /** Cached Mnemosyne working-memory block, refreshed in session_start and agent_end */
+  mnemosyneWarmContext: string;
   startedAt: string;             // ISO
 }
 

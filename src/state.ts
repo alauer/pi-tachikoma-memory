@@ -21,6 +21,7 @@ export function initSession(config?: Config): SessionState {
     messageCount: 0,
     lastSleepAt: 0,
     insightCount: 0,
+    mnemosyneWarmContext: "",
     startedAt: new Date().toISOString(),
   };
   return state;
