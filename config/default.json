@@ -1,0 +1,48 @@
+{
+  "$schema": "./config.schema.json",
+  "tickId": "tachikoma-2",
+  "tachikomaNumber": 2,
+
+  "hindsight": {
+    "baseUrl": "http://192.168.11.14:8888",
+    "banks": {
+      "doctrine": "tako-2-doctrine-test",
+      "character": "tako-2-character-test"
+    },
+    "explain": true,
+    "includeChunks": false,
+    "defaultTopK": 8
+  },
+
+  "mnemosyne": {
+    "dataDir": "~/.hermes/mnemosyne/data/tako-2",
+    "cliBinary": "mnemosyne",
+    "autoInject": {
+      "enabled": true,
+      "topK": 8,
+      "queryString": "recent context Tachikoma-2 observations preferences patterns"
+    },
+    "retention": {
+      "toolExtractEnabled": true,
+      "agentEndLlmExtractEnabled": true,
+      "extractImportanceFloor": 0.55,
+      "minContentLengthForExtract": 600
+    },
+    "sleep": {
+      "autoEveryMessages": 25,
+      "onSessionEnd": true
+    }
+  },
+
+  "session": {
+    "autoMentionIdentity": true,
+    "forceLoadIdentityFiles": true,
+    "refreshIdentityOnHashChange": true,
+    "memoryBlocks": ["tickMarker", "identity", "mnemosyne"]
+  },
+
+  "principal": {
+    "defaultPrincipal": "aaron",
+    "logSwitch": true
+  }
+}

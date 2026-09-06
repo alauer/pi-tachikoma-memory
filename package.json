@@ -1,0 +1,48 @@
+{
+  "name": "pi-tachikoma-memory",
+  "version": "0.1.0",
+  "description": "Unified memory layer for the Living Grid Tachikomas. Bridges Hindsight (L0 doctrine) and Mnemosyne (L1 character) with auto-injection and cross-layer recall.",
+  "homepage": "https://github.com/alauer/pi-tachikoma-memory",
+  "bugs": "https://github.com/alauer/pi-tachikoma-memory/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alauer/pi-tachikoma-memory.git"
+  },
+  "keywords": [
+    "pi-package",
+    "tachikoma",
+    "hindsight",
+    "mnemosyne",
+    "memory",
+    "agent"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "config",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@types/node": "^20.0.0",
+    "typebox": "^0.34.0",
+    "typescript": "^5.0.0"
+  },
+  "pi": {
+    "extensions": [
+      "dist/index.js"
+    ]
+  }
+}
